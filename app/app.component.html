@@ -1,0 +1,20 @@
+<!-- The bug seems to happen whenever an image is inside a layout container -->
+<GridLayout rows="auto,*,auto,auto" padding="20">
+    <Label row="0" opacity="0.54" textWrap="true" textAlignment="center"
+           text="https Image elements do not render when they have borderRadius applied to them inside some layout containers">
+    </Label>
+    <StackLayout row="1" verticalAlignment="middle">
+        <Label text="res://"></Label>
+        <Image src="res://icon" width="32"></Image>
+        <Label text="res:// (borderRadius)"></Label>
+        <Image src="res://icon" width="32" borderRadius="100"></Image>
+        <Label text="https://"></Label>
+        <Image src="https://cdn.rawgit.com/justindujardin/angular-rpg/gh-pages/assets/icon/icon.png" width="32"></Image>
+        <Label text="https:// (borderRadius)"></Label>
+        <Image src="https://cdn.rawgit.com/justindujardin/angular-rpg/gh-pages/assets/icon/icon.png" width="32" borderRadius="100"></Image>
+    </StackLayout>
+    <Label row="2" textWrap="true" class="text-muted text-center"
+           text="I don't know enough about the rendering system to debug it. Help! ❤️">
+    </Label>
+</GridLayout>
+
